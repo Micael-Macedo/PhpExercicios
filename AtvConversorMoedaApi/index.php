@@ -7,5 +7,6 @@ $data = file_get_contents($url);
 $json = json_decode($data);
 $valorCompra =  json_encode($json->value[0]->cotacaoCompra);
 $valorVenda =  json_encode($json->value[0]->cotacaoVenda);
-echo("Valor para compra: $valorCompra \nValor para venda: $valorVenda");
+
+echo "Valor para compra: $valorCompra \nValor para venda: $valorVenda \nValor em Real para conversão: $real\n valor total convertido em dolar: " . round(($real / floatval($valorCompra)),2);
 ?>
