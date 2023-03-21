@@ -12,7 +12,7 @@ echo "Arredondar para cima ". ceil($r) ."\n";
 echo "Arredondar para baixo ". floor($r) ."\n";
 echo "Arredondar para o mais próximo ". round($r) ."\n";
 echo "Calcula hipotenuta ". hypot(3,4) ."\n";
-echo "Arredondar para cima ". intdiv(1, 2) ."\n";
+echo "Divisão Arredondar para cima ". intdiv(1, 2) ."\n";
 echo "Valor maximo ". max(1,3,6,2,3,8,3,2) ."\n";
 echo "Valor minimo ". min(1,3,6,2,3,8,3,2) ."\n";
 echo "Valor de pi ". pi() ."\n";
