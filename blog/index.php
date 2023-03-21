@@ -2,4 +2,5 @@
 require_once 'app/config.php';
 include 'Helper.php';
 
-echo saudacao();
+$texto = "Bem vindo ao meu blog";
+echo resumirTexto($texto, 12);

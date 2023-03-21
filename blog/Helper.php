@@ -14,3 +14,11 @@ function saudacao(){
         return "Boa noite";
     }
 }
+function resumirTexto($texto, int $limite){
+    $texto = trim($texto);
+    if(strlen($texto) > $limite){
+        $textoResumido = substr($texto,0,$limite);
+        return $textoResumido;
+    }
+    return $texto."...";
+}
