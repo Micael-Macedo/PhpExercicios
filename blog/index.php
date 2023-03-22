@@ -10,3 +10,4 @@ if(validarEmail("micael@hotmail.com")){
 }else{
     echo "Email inválido";
 }
+var_dump(localhost("admin"));

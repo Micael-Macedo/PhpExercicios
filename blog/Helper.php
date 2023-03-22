@@ -1,6 +1,6 @@
 <?php
 
-date_default_timezone_set('America/Bahia');
+
 /**
  * Realiza uma saudação conforme o horario da bahia
  * @return string saudação baseada no horário
@@ -70,5 +70,21 @@ function validarEmail(string $email): bool
 }
 function validarUrl(string $url): bool
 {
-    return filter_var($url, FILTER_VALIDATE_URL);
+    if(filter_var($url, FILTER_VALIDATE_URL)){
+        if(!str_contains($url,".")){
+            return false;
+        }
+        if(!str_contains($url, "http://") or !str_contains($url, "https://")){
+            return false;
+        }
+        return true;
+    }
+}
+function getInfoServer(){
+    return $_SERVER;
+}
+function localhost(string $url){
+    $servidor = filter_input(INPUT_SERVER, 'SERVER_NAME');
+    $ambiente = ($servidor == "localhost" ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
+    return $ambiente.$url;
 }
