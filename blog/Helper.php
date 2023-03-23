@@ -88,3 +88,16 @@ function localhost(string $url){
     $ambiente = ($servidor == "localhost" ? URL_DESENVOLVIMENTO : URL_PRODUCAO);
     return $ambiente.$url;
 }
+function dataAtual(){
+    $diaMes = date('d');
+    $diaSemana = date('w');
+    $mes = date("n") - 1;
+    $ano = date('Y');
+
+    $nomesDiasDaSemana = ['Domingo', 'Segunda', 'Terça', "Quarta", "Quinta", "Sexta", "Sabado"];
+    $nomesMeses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+
+    $diaFormatado = "$nomesDiasDaSemana[$diaSemana], $diaMes de $nomesMeses[$mes] de $ano";
+
+    return $diaFormatado;
+}
