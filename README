@@ -1,0 +1,18 @@
+RewriteEngine on:
+Ativa o suporte à reescrita de URL. 
+Isso significa que as URL poderão ser direcionadas para um determinado arquivo no apache.
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+Não aplica a condição para arquivos que existam. Isso significa que as 
+imagens, CSS, JavaScript e outros arquivos que já existem continuarão funcionando perfeitamente.
+
+RewriteCond %{SCRIPT_FILENAME} !-d
+Não aplica a condição para diretórios que existam
+
+RewriteRule ^(.*)$ index.php?url=$1
+Arquivo para onde deve ser direcionado as requisições. 
+Isso significa que tudo que for digitado no browser, 
+após a pasta que está o .htacces e que não exista, será direcionado 
+
+isset()
+Verifica se a variável é definida.
