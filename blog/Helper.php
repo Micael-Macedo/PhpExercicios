@@ -101,3 +101,9 @@ function dataAtual(){
 
     return $diaFormatado;
 }
+function slug(string $string){
+    $mapa['a'] = 'àáâãçéèêíìîóòõôúùûñ';
+    $mapa['b'] = 'aaaaceeeiiioooouuun';
+    $slug = strtr(utf8_decode($string), utf8_decode($mapa['a']), $mapa['b']);
+    return utf8_decode($slug);
+}
